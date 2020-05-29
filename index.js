@@ -35,7 +35,7 @@ const measureUrl = (url) => {
 const checkLength = async (url, opts) => {
   const response = await fetch(url, {
     ...opts,
-    method: 'HEAD',
+    method: 'GET',
   });
   if (response.ok) {
     const length = response.headers.get('content-length');
